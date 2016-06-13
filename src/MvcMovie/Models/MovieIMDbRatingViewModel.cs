@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace MvcMovie.Models
 {
-    public class MovieGenreViewModel
+    public class MovieIMDbRatingViewModel
     {
         public List<Movie> movies;
-        public SelectList genres;
-        public string movieGenre { get; set; }
+        public SelectList IMDbRating;
+        public decimal movieIMDbRating { get; set; }
     }
-
 }

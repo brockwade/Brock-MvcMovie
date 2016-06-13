@@ -25,6 +25,9 @@ namespace MvcMovie.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")][StringLength(5)]
         public string Rating { get; set; }
 
+        [Range(0,10)]
+        public float IMDbRating { get; set; } 
+
         [Display(Name = "Poster")][DataType(DataType.ImageUrl)]
         public string Poster { get; set; }
 

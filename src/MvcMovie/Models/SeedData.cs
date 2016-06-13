@@ -26,6 +26,7 @@ namespace MvcMovie.Models
                          ReleaseDate = DateTime.Parse("1989-1-11"),
                          Genre = "Romantic Comedy",
                          Rating = "R",
+                         IMDbRating = 7.6F,
                          Price = 7.99M,
                          Poster =  "http://ia.media-imdb.com/images/M/MV5BMjE0ODEwNjM2NF5BMl5BanBnXkFtZTcwMjU2Mzg3NA@@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
                      },
@@ -37,6 +38,7 @@ namespace MvcMovie.Models
                          ReleaseDate = DateTime.Parse("1984-3-13"),
                          Genre = "Comedy",
                          Rating = "PG",
+                         IMDbRating = 7.8F,
                          Price = 8.99M,
                          Poster = "http://netdna.walyou.netdna-cdn.com/wp-content/uploads//2011/10/Ghostbusters-Movie-Poster.jpg"
                      },
@@ -49,6 +51,7 @@ namespace MvcMovie.Models
                          Genre = "Comedy",
                          Rating = "PG",
                          Price = 9.99M,
+                         IMDbRating = 6.5F,
                          Poster = "https://upload.wikimedia.org/wikipedia/en/0/01/Ghostbusters_ii_poster.jpg"
                      },
 
@@ -59,6 +62,7 @@ namespace MvcMovie.Models
                        ReleaseDate = DateTime.Parse("1959-4-15"),
                        Genre = "Western",
                        Rating = "PG-13",
+                       IMDbRating = 8.1F,
                        Price = 3.99M,
                        Poster = "http://www.doctormacro.com/Images/Posters/R/Poster%20-%20Rio%20Bravo_01.jpg"
                    }

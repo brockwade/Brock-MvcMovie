@@ -26,6 +26,9 @@ namespace MvcMovie.Controllers
                                             orderby m.Genre
                                             select m.Genre;
 
+            //IQueryable<float> IMDbRatingQuery = from i in _context.Movie
+                                                //orderby i.IMDbRating
+                                                //select i.IMDbRating;
             var movies = from m in _context.Movie
                          select m;
 
@@ -39,11 +42,20 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
 
+            //List<Movie> SortedmovieList = await movies.OrderBy(o => o.IMDbRating).ToListAsync();
+
+            var SortedMovies = movies.OrderByDescending(o => o.IMDbRating);
             var movieGenreVM = new MovieGenreViewModel();
             movieGenreVM.genres = new SelectList(await genreQuery.Distinct().ToListAsync());
-            movieGenreVM.movies = await movies.ToListAsync();
+            movieGenreVM.movies = await SortedMovies.ToListAsync();
+
+            //var movieIMDbRatingVM = new MovieIMDbRatingViewModel();
+            //movieIMDbRatingVM.IMDbRating = new SelectList(await movies.OrderBy(o => o.IMDbRating).ToListAsync());
+            //movieIMDbRatingVM.movies = await movies.ToListAsync();
 
             return View(movieGenreVM);
+
+            //return View(movieIMDbRatingVM);
         }
 
         // GET: Movies/Details/5
@@ -74,7 +86,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Genre,Price,ReleaseDate,Title,Rating,Director")] Movie movie)
+        public async Task<IActionResult> Create([Bind("ID,Genre,Price,ReleaseDate,Title,Rating,Director,IMDbRating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +118,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Genre,Price,ReleaseDate,Title,Rating,Poster,Director")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Genre,Price,ReleaseDate,Title,Rating,Poster,Director,IMDbRating")] Movie movie)
         {
             if (id != movie.ID)
             {

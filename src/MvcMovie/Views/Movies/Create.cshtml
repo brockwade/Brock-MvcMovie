@@ -54,6 +54,13 @@
             </div>
         </div>
         <div class="form-group">
+            <label asp-for="IMDbRating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IMDbRating" class="form-control" />
+                <span asp-validation-for="IMDbRating" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="Poster" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="Poster" class="form-control" />

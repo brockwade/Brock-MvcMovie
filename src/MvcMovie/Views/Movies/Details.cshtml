@@ -39,14 +39,106 @@
         <dt>
             @Html.DisplayNameFor(model => model.Director)
         </dt>
-        <dt>
+        <dd>
             @Html.DisplayFor(model => model.Director)
-        </dt>
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Rating)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Rating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IMDbRating)
+            @if (Model.IMDbRating >= 1 && Model.IMDbRating < 2)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 2 && Model.IMDbRating < 3)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 3 && Model.IMDbRating < 4)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 4 && Model.IMDbRating < 5)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 5 && Model.IMDbRating < 6)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 6 && Model.IMDbRating < 7)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 7 && Model.IMDbRating < 8)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 8 && Model.IMDbRating < 9)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating >= 9 && Model.IMDbRating < 10)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            }
+            @if (Model.IMDbRating == 10)
+            {
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+           }
+
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IMDbRating)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Poster)
